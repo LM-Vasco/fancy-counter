@@ -1,6 +1,15 @@
-function Title() {
+function Title({ isLocked }) {
     return (
-        <h1 className="title">Fancy Counter</h1>
+        <h1 className="title">
+            {isLocked
+                ? (
+                    <span>
+                        Limit! CLick <b>reset</b>
+                    </span>
+                )
+                : 'Fancy Counter'
+            }
+        </h1>
     )
 }
 
